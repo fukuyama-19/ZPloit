@@ -5,7 +5,7 @@ import os
 import socket
 import urllib
 
-os.system ("cls")
+os.system ("clear")
 
 banner = """
                    d8b           d8,        
@@ -30,7 +30,7 @@ Text = """
 """
 
 def main ():
-    os.system ("cls")
+    os.system ("clear")
     print (Fore.RED + banner)
     print (Fore.GREEN + Text)
     print (Fore.WHITE + "Create BY Exploit-181 | Facebook Page : @exploit-181")
@@ -43,7 +43,7 @@ def main ():
         url = input("Enter Url Address => ")
         req = requests.get (url).headers
         print(Fore.RED, req)
-        os.system ("pause")
+        os.system ("sleep 100")
         main()
     elif (choosen == "2"):
         ipaddress = input("Enter IP Address => ")
@@ -56,7 +56,7 @@ def main ():
             if (connect == 0):
                 print(Fore.GREEN + "[*] Port Open From "+ipaddress+":"+str(port))
             sock.close()
-        os.system ('pause')
+        os.system ('sleep 100')
         main()
     elif (choosen == "3"):
         files = open ("admin_path.txt", "r").readlines()
@@ -69,7 +69,7 @@ def main ():
                 print (Fore.GREEN + "[*] Url Found : "+url+"/"+files[i])
             except:
                 pass
-        os.system ("pause")
+        os.system ("sleep 100")
         main ()
     elif (choosen == "4"):
         url = input("Enter Url [https://example.com/login.php] => ")
@@ -81,7 +81,7 @@ def main ():
         except:
             for lstt in range(len(lst)):
                 print (Fore.RED + "[*] Trying To Get The File")
-        os.system ('pause')
+        os.system ('sleep 100')
         main()
     elif (choosen == "5"):
         path = "X-Frame-Options"
@@ -91,7 +91,7 @@ def main ():
             print (Fore.RED + "[+] Not Found Clickjacking Vulnerability "+ Fore.WHITE+" => "+url+path)
         else:
             print (Fore.GREEN + "[*] Missing Clickjacking => "+url+" => "+path)
-        os.system ("pause")
+        os.system ("sleep 100")
         main()
     elif (choosen == "6"):
         pass
